@@ -1,34 +1,40 @@
-<!DOCTYPE html>
-<html <?php language_attributes() ;?> >
-<head>
-<meta charset="<?php bloginfo('charset');?>">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title><?php bloginfo('name');?></title>
-<link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet" type="text/css">
-<!-- this function will allow plugin info (stylesheets, javascript, etc) to
-display before the closing head -->
-<?php wp_head();?>
-</head>
-<body <?php body_class();?>>
-<header></header>
-<div id="top">
+<?php get_header();?>
+<div class="hero"> </div>
+<div id="wrapper">
+<main>
+<?php if(have_posts()) : ?> 
+<?php while(have_posts()) : the_post() ;?> 
+<article class="post">
+<h2 class="post-title"><a href="<?php the_permalink() ;?>"><?php the_title() ;?></a></h2>
 
-</div><!--close top-->
+<div class="meta">
+<span><b>Posted By: </b><?php the_author() ;?></span>
+<span><b>Posted On: </b><?php the_time('F j, Y g:i a') ;?></span>
+</div><!--close meta-->
 
-<div id="inner-header"></div><!--close inner-header-->
+<div class="thumbnail">
+<?php if(has_post_thumbnail()) : ?>
+    <a href="<?php the_permalink() ;?>">
+    <?php the_post_thumbnail() ;?> </a>
+<?php endif ;?>
+</div><!--end thumbnail-->
 
-<?php if(have_posts()) : ?> <!-- if we have posts/pages- show them! -->
+<?php the_excerpt() ;?>
+<span class="block">
+    <a href="<?php the_permalink() ;?>">Learn More About <?php the_title(); ?>!</a>
+</span>
 
-<?php while(have_posts()) : the_post() ;?>     <!-- show posts by using while loop -->
-
-<?php the_content() ;?>
-
+</article>
 <?php endwhile ;?>
 
 <?php else : ?>
-<h2><?php echo wpautop('Sorry, no posts were found!');?></h2>
+<h2>Search Results:</h2>
+<p>Sorry, we could not find any posts using your search terms. 
+Try searching again using different keywords</p>
 <?php endif ;?>
+</main>
 
-</body>
-</html>
+   <?php get_sidebar(); ?>
+
+</div><!--end wrapper-->
+<?php get_footer();?>
