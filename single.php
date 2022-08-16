@@ -1,6 +1,8 @@
 <?php get_header();?>
 
-<div class="hero"> </div>
+<div id="inner-hero">
+    <!-- <img src="<?php echo get_template_directory_uri();?>/images/kayak_inner_hero.jpeg" alt="colorful kayaks"> -->
+</div>
 
 <div id="wrapper">
 <main>
@@ -30,6 +32,8 @@
 
 <?php comments_template(); ?>
 </main>
+
+<?php get_sidebar(); ?>
 
 </div><!--wrapper-->
 <?php get_footer();?>

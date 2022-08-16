@@ -1,7 +1,9 @@
 <?php get_header();
 /* Template Name: Tours Page */
 ?>
-<div class="hero"> </div>
+<div id="inner-hero">
+
+</div>
 <div id="wrapper">
 
 <main>

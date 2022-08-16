@@ -1,14 +1,15 @@
 <?php get_header();
 /* Template Name: Front Page */
 ?> 
+<div id="inner-hero">
 
-<!-- <div class="hero mobile">
+</div>
+
+<div id="hero-small"> <!-- Home page hero image (mobile) displays here-->
     <img src="<?php echo get_template_directory_uri();?>/images/kayak_upright.jpeg" alt="colorful kayaks">
-</div> -->
+</div>
 
 <div class="hero" id="hero-large"><!-- Home page hero image displays here--></div>
-
-<div class="hero" id="hero-small"><!-- Home page hero image (mobile) displays here--></div>
 
 <div id="wrapper">
 

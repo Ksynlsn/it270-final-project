@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    background: rgb(49, 128, 219);
+    background: rgb(19, 20, 21);
     height: 120px;
     position: fixed;
     top: 0;
@@ -30,7 +30,7 @@ header {
     margin: 0 auto;
     height: 60px;
     padding: 20px;
-    background: rgb(95, 201, 173);
+    background: rgb(76, 78, 77);
 }
 
 #wrapper {
@@ -40,20 +40,20 @@ header {
 
 /* Hero Images */
 
-.home .hero { /*Home Page Hero*/
+#hero-large { /*Home Page Hero*/
 	background-image: url(http://kaciecodes.com/it270/final-project/wp-content/uploads/kayak_hero_large.jpeg);
 	height: 500px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-
 }
 
-.inner-page .hero {
+#inner-hero {
 	width: 100%;
-	background: orange;
-	height: 300px;
+	background: #ffa500;
+	height: 180px;
 }
+
 
 /* Main Navigation*/
 .nav-button {
@@ -83,7 +83,7 @@ header {
 #site-navigation li:hover .sub-menu {
 	display: block;
 	position: absolute;
-	background: #eee;
+	background: rgb(76, 78, 77);
 	padding: 5px;
 	width: 180px;
 }
@@ -103,47 +103,126 @@ img {
     display: block;
 }
 
+.page-template-page-tours img {
+	margin: 0 auto;
+}
+
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image { /*blog*/
+	margin: 15px 0 10px 0;
+}
+
 /* end images */
 
 
 /* Page Layout */
 
 main {
-	border: 2px solid black;
+	border: 2px solid rgb(19, 20, 21);
     padding: 2%;
-}
-
-.home main {
-    width: 88%;
-}
-
-/* Inner Pages */
-
-.inner-page main {
-	border: 2px solid black;
-	float: left;
-	width: 48%;
-}
-
-.inner-page aside {
-	float: right;
-	width: 45%;
-}
-
-
-/* Contact Page */
-
-.contact main {
 	width: 90%;
+	margin: 20px auto;
+}
+
+aside {
+	/* border: 2px solid black; */
+    padding: 2%;
+	width: auto;
+	margin: 20px auto;
+}
+
+
+/* Tours Pages */
+
+.page-template-page-tours main {
+	float: left;
+	width: 70%;
+}
+
+.page-template-page-tours aside {
+	float: right;
+	width: 25%;
+}
+
+/* Blog Page */
+
+.blog main,
+.single main {
+	float: left;
+	width: 60%;
+}
+
+.blog aside,
+.single aside {
+	float: right;
+	width: 35%;
+}
+
+
+/* Single Post Page */
+
+/* About Page */
+
+.about main {
+	float: left;
+	width: 50%;
+}
+
+.about aside {
+	width: 48%;
+	float: right;
+	padding: 20px;
+}
+
+.wp-image-86 {
 	margin: 0 auto;
-	float: none;
+	padding: 2px;
+}
+
+/* Newsletter */
+
+.with_frm_style legend + h3 {
+	text-align: center;
+}
+
+/* Comment Form*/
+#commentform {
+    /* border: 1px solid tan; */
+    padding: 10px;
+    margin: 10px 0 20px 0;
+}
+
+.comment-notes {
+    font-size: .9em;
+    font-style: italic;
+    color: rgb(19, 20, 21);
+    margin-bottom: 6px;
+}
+
+#reply-title {
+	margin-top: 20px;
+	font-style: italic;
+}
+
+label {
+    display: block
+}
+
+.comment-form-cookies-consent label {
+    display: inline;
+}
+
+.comment-form p {
+    margin-bottom: 10px;
+}
+
+.commentlist {
+    margin: 10px 0 15px 30px;
 }
 
 /* Footer  */
 
 footer {
 	clear: both;
-	padding-top: 40px;
 }
 
 .inner-footer {
@@ -157,9 +236,9 @@ footer {
 }
 
 .footer-widget {
-	border: 2px solid black;
+	border: 3px solid whitesmoke;
 	width: 48%;
-	padding: 1%;	
+	padding: 3%;
 }
 
 .bottom  ul {
@@ -169,7 +248,17 @@ footer {
 	list-style-type: none;
 }
 
-/* typography */
+/* Typography */
+
+.logo {
+	font-size: 2.6em;
+	font-weight: bold;
+	letter-spacing: 0.08em;
+	font-family: 'Shrikhand', cursive;
+	color: rgb(250, 235, 215);
+	position: absolute;
+	bottom: 30px;
+}
 
 h1, 
 h2, 
@@ -178,18 +267,67 @@ h4 {
 	font-family: 'Fjalla One', sans-serif;
 }
 
-.post-title h2 {
-    font-size: 1.6em;
-}
-
 h1 {
 	text-transform: uppercase;
 	text-align: center;
 	color: #B10F53;
 	padding-bottom: 10px;
 	padding-top: 15px;
-	font-size: 2em;
-	line-height: 130%;
+	font-size: 2.3em;
+}
+
+h2 {
+	color: rgb(76, 78, 77);
+	margin: 12px 0;
+	font-size: 1.8em;
+}
+
+#secondary h3 {
+	font-size: 1.4em;
+	text-align: center;
+	margin-bottom: 10px;
+	letter-spacing: 3px;
+}
+
+#primary h3 {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+	letter-spacing: 3px;
+}
+
+p {
+	line-height: 2em;
+	font-family: "Montserrat",Helvetica,Arial,sans-serif;
+	margin: 10px 0;
+}
+
+#site-navigation a {
+	font-family: 'Nanum Gothic Coding', monospace;
+	color: rgb(250, 235, 215);
+	padding-left: 5px;
+}
+
+.post-title a { /* blog  post title */
+    font-size: 1em;
+	color: rgb(76, 78, 77);
+	text-decoration: none;
+}
+
+/* Widgets */
+
+.widget-area li {
+	margin-bottom: 8px;
+	font-size: 1.2em;
+	color: rgb(19, 20, 21);
+	list-style-type: none;
+}
+
+footer h3 {
+	color: #B10F53;
+	text-align: center;
+	font-size: 1.6em;
+	margin: 0.4em;
+	letter-spacing: .07em;	
 }
 
 /* Media Queries */
@@ -205,15 +343,59 @@ h1 {
 /* Mobile Media Queries */
 @media only screen and (max-width: 666px) {
 
-    main, aside {
+	#wrapper {
+		margin: 1% 2%;
+	}
+
+	#hero-large { 
+		display: none;
+	}
+	
+	header {
+		height: auto;
+	}
+
+	h1, h2, h3 {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 1.6em;
+	}
+
+	h2 {
+		font-size: 1.4em
+	}
+
+	#secondary h3,
+	#primary h3 {
+		font-size: 1.2em;
+	}
+	
+    .inner-page main, 
+	.inner-page aside {
         float: none;
-        width: 90%;
+        width: 100%;
         margin: 2% auto;
     }
 
     #inner-header {
-        background: rgb(49, 128, 219);
+        background: rgb(138, 49, 93);
+		height: 40px; /* hides header behind mobile nav bar*/
     }
+
+	#inner-hero {
+		display: none;
+	}
+
+	.inner-footer.top {
+		flex-direction: column;
+	}
+	
+	.footer-widget {
+		width: 100%;
+		margin-bottom: 3%;
+	}
 
     
 
@@ -256,14 +438,13 @@ h1 {
 	.primary-nav {
 		width: 100%;
 		float: none;
-		background-color: #238be3; /* change the menu color */
+		background-color: rgb(19, 20, 21); /* change the menu color */
 		background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
 		display: block;
 		height: 50px;
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
-		box-shadow: 0 1px 2px rgba(0,0,0,.6);
 		position: absolute;
 		top: 0px;
 		left: 0px;
@@ -282,7 +463,7 @@ h1 {
 		font-size: 14px;
 		font-weight: bold;
 		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
-		color: white;
+		color: whitesmoke;
 		text-decoration: none;
 		border-bottom: 1px solid rgba(0,0,0,.2);
 		border-top: 1px solid rgba(255,255,255,.1);
@@ -353,16 +534,5 @@ h1 {
 		border-top: 0 none;
 	}
 /* end astueteo */
-
-#hero-large { 
-	display: none;
-}
-
-
-
-header {
-	height: auto;
-}
-
 
 } /* End Mobile Styles */

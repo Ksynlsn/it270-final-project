@@ -1,6 +1,9 @@
 <?php get_header();?>
-<div class="hero"> </div>
+<div id="inner-hero">
+    <!-- <img src="<?php echo get_template_directory_uri();?>/images/kayak_inner_hero.jpeg" alt="colorful kayaks"> -->
+</div>
 <div id="wrapper">
+<h1>Seattle Area Kayak Tours</h1>
 <main>
 <?php if(have_posts()) : ?> 
 <?php while(have_posts()) : the_post() ;?> 

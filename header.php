@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title><?php bloginfo('name');?></title>
 <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nanum+Gothic+Coding:wght@700&family=Shrikhand&display=swap" rel="stylesheet">
 <!-- this function will allow plugin info (stylesheets, javascript, etc) to
 display before the closing head -->
 <?php wp_head();?>
@@ -15,6 +15,7 @@ display before the closing head -->
 
 <header>
 <div id="inner-header">
+<a href="<?php echo get_home_url() ;?>"><span class="logo">PNW Kayak</span></a>
 <nav id="site-navigation" class="main-navigation">
 <button class="nav-button">Toggle Navigation</button>
 <?php
