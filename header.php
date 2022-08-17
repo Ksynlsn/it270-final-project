@@ -4,6 +4,7 @@
 <meta charset="<?php bloginfo('charset');?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://kit.fontawesome.com/236cdfe8ce.js" crossorigin="anonymous"></script>
 <title><?php bloginfo('name');?></title>
 <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nanum+Gothic+Coding:wght@700&family=Shrikhand&display=swap" rel="stylesheet">
@@ -26,5 +27,6 @@ $args_primary = array(
 ?>
 <?php wp_nav_menu($args_primary); ?>
 </nav>
+<a href="<?php echo get_home_url() ;?>"><span id="logo-mobile">PNW Kayak</span></a>
 </div><!--close inner-header-->
 </header>

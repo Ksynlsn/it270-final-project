@@ -11,8 +11,8 @@
 <h2 class="post-title"><a href="<?php the_permalink() ;?>"><?php the_title() ;?></a></h2>
 
 <div class="meta">
-<span><b>Posted By: </b><?php the_author() ;?></span>
-<span><b>Posted On: </b><?php the_time('F j, Y g:i a') ;?></span>
+<span class="block"><b>Posted By: </b><?php the_author() ;?></span>
+<span class="block"><b>Posted On: </b><?php the_time('F j, Y g:i a') ;?></span>
 </div><!--close meta-->
 
 <div class="thumbnail">

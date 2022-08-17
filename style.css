@@ -15,13 +15,15 @@ html {
 }
 
 body {
-    background :rgb(226, 222, 224);
+    /* background :rgb(226, 222, 224); */
+	background :rgb(255, 255, 255);
 }
 
 header {
     background: rgb(19, 20, 21);
     height: 120px;
     position: fixed;
+	z-index: 3;
     top: 0;
     width: 100%;
 }
@@ -38,15 +40,28 @@ header {
     margin: 2% 5%;
 }
 
+.home #wrapper,
+.contact #wrapper {
+	margin: 2% 15%;
+}
+
+.block {
+	display: block;
+}
+
+.italic {
+	font-style: italic;
+}
+
 /* Hero Images */
 
-#hero-large { /*Home Page Hero*/
-	background-image: url(http://kaciecodes.com/it270/final-project/wp-content/uploads/kayak_hero_large.jpeg);
-	height: 500px;
+/* #hero-large { Home Page Hero */
+	/* background-image: url(http://kaciecodes.com/it270/final-project/wp-content/uploads/kayak_hero_large.jpeg);
+	height: 450px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+} */
 
 #inner-hero {
 	width: 100%;
@@ -117,19 +132,17 @@ img {
 /* Page Layout */
 
 main {
-	border: 2px solid rgb(19, 20, 21);
+	border: 1px solid rgb(19, 20, 21);
     padding: 2%;
 	width: 90%;
 	margin: 20px auto;
 }
 
 aside {
-	/* border: 2px solid black; */
     padding: 2%;
 	width: auto;
 	margin: 20px auto;
 }
-
 
 /* Tours Pages */
 
@@ -141,6 +154,10 @@ aside {
 .page-template-page-tours aside {
 	float: right;
 	width: 25%;
+}
+
+#menu-tours li {
+	text-align: center;
 }
 
 /* Blog Page */
@@ -186,7 +203,6 @@ aside {
 
 /* Comment Form*/
 #commentform {
-    /* border: 1px solid tan; */
     padding: 10px;
     margin: 10px 0 20px 0;
 }
@@ -223,10 +239,11 @@ label {
 
 footer {
 	clear: both;
+	background: rgb(194, 189, 194);
 }
 
 .inner-footer {
-    background: rgb(194, 189, 194);
+    /* background: rgb(194, 189, 194); */
     padding: 3%;
 }
 
@@ -236,9 +253,17 @@ footer {
 }
 
 .footer-widget {
-	border: 3px solid whitesmoke;
+	border: 2px solid whitesmoke;
 	width: 48%;
 	padding: 3%;
+	border-radius: 5px;
+}
+
+.footer-widget .recentcomments,
+.footer-widget .textwidget.custom-html-widget {
+	text-align: center;
+	font-size: 1.1em;
+	line-height: 1.5;
 }
 
 .bottom  ul {
@@ -246,6 +271,17 @@ footer {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	list-style-type: none;
+}
+
+.social { 
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+}
+.social i {
+	font-size: 40px;
+	margin: 0.5em;
+	color: rgb(19, 20, 21);
 }
 
 /* Typography */
@@ -282,6 +318,10 @@ h2 {
 	font-size: 1.8em;
 }
 
+.home h2 {
+	margin-top: 30px;
+}
+
 #secondary h3 {
 	font-size: 1.4em;
 	text-align: center;
@@ -299,6 +339,16 @@ p {
 	line-height: 2em;
 	font-family: "Montserrat",Helvetica,Arial,sans-serif;
 	margin: 10px 0;
+	text-indent: 20px;
+	padding: 5px;
+}
+
+blockquote { 
+	font-weight: bold;
+	font-size: larger;
+	text-align: center;
+	line-height: 33px;
+	margin: 10px 5px 20px;
 }
 
 #site-navigation a {
@@ -334,7 +384,8 @@ footer h3 {
 @media (min-width: 667px) {
 
 .nav-button,
-#hero-small { 
+#hero-small,
+#logo-mobile { 
 	display: none; 
 } 
 
@@ -343,12 +394,28 @@ footer h3 {
 /* Mobile Media Queries */
 @media only screen and (max-width: 666px) {
 
-	#wrapper {
-		margin: 1% 2%;
+	#wrapper,
+	.home #wrapper,
+	.contact #wrapper {
+		margin: 1% 3%;
 	}
 
 	#hero-large { 
 		display: none;
+	}
+
+	#logo-mobile {
+		display: block;
+		z-index: 999;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		font-size: 1.8em;
+		font-weight: bold;
+		letter-spacing: 0.08em;
+		font-family: 'Shrikhand', cursive;
+		color: #ffa500;
+		padding-right: 1%;
 	}
 	
 	header {
@@ -367,9 +434,17 @@ footer h3 {
 		font-size: 1.4em
 	}
 
+	.home h2 {
+		margin-top: 20px;
+	}
+
 	#secondary h3,
 	#primary h3 {
 		font-size: 1.2em;
+	}
+
+	#primary {
+		text-align: center;
 	}
 	
     .inner-page main, 
@@ -380,7 +455,6 @@ footer h3 {
     }
 
     #inner-header {
-        background: rgb(138, 49, 93);
 		height: 40px; /* hides header behind mobile nav bar*/
     }
 

@@ -9,7 +9,11 @@
     <img src="<?php echo get_template_directory_uri();?>/images/kayak_upright.jpeg" alt="colorful kayaks">
 </div>
 
-<div class="hero" id="hero-large"><!-- Home page hero image displays here--></div>
+<div class="hero" id="hero-large"><!-- Home page hero image displays here-->
+<?php 
+echo do_shortcode('[smartslider3 slider="2"]');
+?>
+</div>
 
 <div id="wrapper">
 
